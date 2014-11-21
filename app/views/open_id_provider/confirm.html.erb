@@ -1,0 +1,22 @@
+<p><%= l(:label_confirm_trust) %></p>
+
+<form method="post" action="<%= url_for :controller => 'open_id_provider', :action => 'confirm' %>">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<table>
+  <tr><td><%= l(:label_site) %>:</td><td><%= @open_id_request.trust_root %></td></tr>
+
+  <% if not @open_id_request.id_select %>
+    <tr><td>Identity:</td><td><%= @open_id_request.identity %></td></tr>
+  <% end %>
+</table>
+
+<% if @open_id_request.id_select %>
+  <input type="hidden" name="id_to_send" value="<%= User.current.id %>" /></td>
+<% else %>
+  <input type="hidden" name="id_to_send" value="<%= @open_id_request.identity %>" /></td>
+<% end %>
+
+<input type="submit" name="yes" value="yes" />
+<input type="submit" name="no" value="no" />
+
+</form>

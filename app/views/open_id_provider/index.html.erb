@@ -1,0 +1,7 @@
+<% content_for :header_tags do %>
+  <meta http-equiv="X-XRDS-Location" content="<%= url_for(:controller=>'open_id_provider', :action=>'idp_xrds', :only_path=>false) %>" />
+<% end %>
+
+<h1>OpenID Server Endpoint</h1>
+
+

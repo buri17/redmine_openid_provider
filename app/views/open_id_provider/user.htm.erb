@@ -1,0 +1,8 @@
+<% content_for :header_tags do %>
+  <meta http-equiv="X-XRDS-Location" content="<%= url_for(:controller=>'open_id_provider', :action=>'idp_xrds', :only_path=>false) %>" />
+  <link rel="openid.server" href="<%= url_for :action => 'index' %>" />
+<% end %>
+
+<h1>OpenID identity page for <%= User.find(params[:username]).name =></h1>
+
+

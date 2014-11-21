@@ -1,0 +1,4 @@
+= redmine_openid_provider
+
+This plugin enables Redmine to behave as an OpenID provider.
+

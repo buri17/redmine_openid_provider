@@ -1,4 +1,4 @@
-Redmien OpenID Provider Plugin
+Redmine OpenID Provider Plugin
 ==============================
 
 This plugin enables Redmine to behave as an OpenID provider.
